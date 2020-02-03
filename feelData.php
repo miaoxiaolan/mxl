@@ -53,7 +53,7 @@
 <?php
 require_once "DBHelper.php";
 $con = new  DBHelper();
-$sql = "SELECT 	cat_articleId,cat_author,cat_from, cat_articleType,cat_title, cat_date, cat_imageSrc,cat_article,clicks_ip_COUNT FROM  catfeel order by  cat_articleId desc 
+$sql = "SELECT 	cat_articleId,(SELECT user.nickname FROM sdm173965183_db.user WHERE userID=cat_author) AS cat_author,cat_from, cat_articleType,cat_title, cat_date, cat_imageSrc,cat_article,clicks_ip_COUNT FROM  catfeel order by  cat_articleId desc 
  ";
 $res = $con->getAll($sql);
 $num = count($res);

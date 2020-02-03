@@ -1,7 +1,7 @@
 ;
 (function ($) {
-    $.fn.extend({
-        coverPreviewModuleInit: function () {
+   
+        $.fn.coverPreviewModuleInit=function () {
             var $this = this,
                 option = {
                     row: $this.attr('data-row') || 10,
@@ -14,6 +14,7 @@
                     currentIndex = Math.floor(e.offsetX / (box_width / option.frames)),
                     currentY = Math.floor(currentIndex / option.row),
                     currentX = Math.floor(currentIndex - (currentY * option.row));
+                    console.log(currentY);
                 $that.css({
                     'background-position': (-currentX * box_width) + 'px ' + (-currentY * box_height) + 'px'
                 });                
@@ -47,5 +48,5 @@
                 $that.siblings('.list_user').show();
             });
         }
-    })
-})(jQuery)
+
+})(jQuery);

@@ -209,7 +209,7 @@ if (isset($_SESSION['user'])) {
 
                     <!-- 主体显示区 -->
                     <section id="content">
-                        <iframe src="feelData" width="100%" height="980px" frameborder="0" scrolling="yes"></iframe>
+                        <iframe src="feelData" width="100%" height="100%" frameborder="0" scrolling="yes"></iframe>
                     </section>
                 </section>
             </section>

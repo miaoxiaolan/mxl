@@ -7,7 +7,7 @@ require "DBHelper.php";
 
 $con = new  DBHelper();
 
-$name = $_SESSION['user'];
+$name = $_SESSION['userID'];
 
 
 

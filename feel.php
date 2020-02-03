@@ -1,14 +1,14 @@
 ﻿<?php
     require_once "DBHelper.php";
     $con = new  DBHelper();
-    $sql = "SELECT 	cat_articleId,cat_author,cat_from, cat_articleType,cat_title, cat_date, cat_imageSrc,cat_article,clicks_ip_COUNT FROM  catfeel order by  clicks_ip_COUNT desc 
+    $sql = "SELECT 	cat_articleId,(SELECT user.nickname FROM sdm173965183_db.user WHERE userID=cat_author) AS cat_author,cat_from, cat_articleType,cat_title, cat_date, cat_imageSrc,cat_article,clicks_ip_COUNT FROM  catfeel order by  clicks_ip_COUNT desc 
  ";
-    $sql2 = "SELECT 	cat_articleId,cat_author,cat_from, cat_articleType,cat_title, cat_date, cat_imageSrc,cat_article,clicks_ip_COUNT FROM  catfeel order by  cat_articleId desc 
+    $sql2 = "SELECT 	cat_articleId,(SELECT user.nickname FROM sdm173965183_db.user WHERE userID=cat_author) AS cat_author,cat_from, cat_articleType,cat_title, cat_date, cat_imageSrc,cat_article,clicks_ip_COUNT FROM  catfeel order by  cat_articleId desc 
  ";
 //    获取到的变量
     $tmp = $_GET['data'];
 
-    $sql3="SELECT 	cat_articleId,cat_author,cat_from, cat_articleType,cat_title, cat_date, cat_imageSrc,cat_article,clicks_ip_COUNT FROM  catfeel where cat_articleId=".$tmp;
+    $sql3="SELECT 	cat_articleId,(SELECT user.nickname FROM sdm173965183_db.user WHERE userID=cat_author) AS cat_author,cat_from, cat_articleType,cat_title, cat_date, cat_imageSrc,cat_article,clicks_ip_COUNT FROM  catfeel where cat_articleId=".$tmp;
     $res = $con->getAll($sql);
     $res2 = $con->getAll($sql2);
     $res3=$con->getAll($sql3);   

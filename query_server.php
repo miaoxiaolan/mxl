@@ -39,7 +39,7 @@ $num = ($tmp - 1) * $pageLine;
 
 $result = $con->getAll("
 
-SELECT 	cat_articleId, cat_author, cat_from, cat_articleType, cat_title, cat_date, cat_imageSrc, cat_article, clicks_ip_count FROM catfeel   ORDER BY  cat_articleId DESC limit " . $num . ",$pageLine");
+SELECT cat_articleId,(SELECT user.nickname FROM sdm173965183_db.user WHERE userID=cat_author) AS cat_author,cat_date,cat_from,cat_articleType, cat_title, cat_date, cat_imageSrc, cat_article, clicks_ip_count FROM catfeel   ORDER BY  cat_articleId DESC limit " . $num . ",$pageLine");
 //遍历输出
 echo json_encode($result);
 

@@ -248,18 +248,21 @@ html {
         width: 680px;
         height: 100%;
         float: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
         background: #000
     }
-    .Dplayer_danmu {
+    /* .Dplayer_danmu {
         width: 299px;
         float: right;
         height: 100%
-    }
+    } */
     #player1 {
         background-size: 100% 100%;
-        margin-top: 30px
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
-    .Dplayer_watching {
+    /* .Dplayer_watching {
         width: 100%;
         height: 60px;
         line-height: 60px;
@@ -350,7 +353,7 @@ html {
     
     .danmuku_list li:nth-child(3) {
         margin-left: 5px
-    }
+    } */
 }
 
 

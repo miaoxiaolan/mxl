@@ -114,7 +114,7 @@
             container: document.getElementById('player1'),
             video: {
                 url: data_url,
-                pic: data_pic,
+                pic: data_pic,                
             }            
         });
 

@@ -7,85 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>小懒ai跳舞</title>
     <link rel="shortcut icon" href="images/iconlogo.png" />
-    <link rel="stylesheet" href="css/dance.css">
-    <link rel="stylesheet" href="css/navagation.css">
-
-    <link rel="stylesheet" href="css/pageXx.css">
-    <style>
-        .list_wapper {
-            width: 890px;
-            background-color: #fff;
-            margin: 0 auto;
-            padding: 40px;
-        }
-
-        .clearfix::after {
-            display: block;
-            clear: both;
-            content: "";
-            overflow: hidden;
-            height: 1%;
-        }
-
-        .list_ul {
-            margin-left: -20px;
-        }
-
-        .list_items {
-            float: left;
-            margin: 0 0 20px 20px;
-        }
-
-        .cover_container {
-            width: 160px;
-            height: 90px;
-        }
-
-        .icon_ul {
-            position: absolute;
-            color: white;
-            bottom: 5px;
-        }
-
-        .icon_ul>li {
-            margin-left: 5px;
-            float: left;
-        }
-
-        .icon_ul>li span {
-            font-size: 12px;
-        }
-
-        .icon_ul>li svg {
-            transform: translate(3px, 6px);
-
-        }
-
-        a {
-            color: black;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: blue;
-        }
-
-        .list_title,
-        .list_user {
-            font-size: 14px;
-            text-overflow: ellipsis;
-            word-break: break-all;
-            overflow: hidden;
-            width: 160px;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            white-space: normal;
-        }
-
-        .list_user {
-            color: #ccc;
-        }
+    
+    <link rel="stylesheet" href="css/navagation.css"/>
+    <link rel="stylesheet" type="text/css"  href="css/videodance.css"/>
+    <link rel="stylesheet" href="css/pageXx.css"/>   
+    <style>   
     </style>
 </head>
 
@@ -93,8 +19,7 @@
     <?php
     require_once "DBHelper.php";
     $con = new  DBHelper();
-    $sql = " select * FROM  catvideo order by  v_id desc 
- ";
+    $sql = " select * FROM  catvideo order by  v_id desc ";
 
     $res = $con->getAll($sql);
     $num = count($res);
@@ -306,10 +231,6 @@
         $(".cover_container").coverPreviewModuleInit();
     </script>
 
-
-    <script>
-
-    </script>
 </body>
 
 </html>
